@@ -11,7 +11,7 @@ $xml = simplexml_load_file("students.xml");
 <body>
 <div class="container">
     <h1>Student Management System</h1>
-    <a href="add_student.php" class="btn">Add Student</a>
+
     <table>
         <tr>
             <th>Name</th>
@@ -35,6 +35,10 @@ $xml = simplexml_load_file("students.xml");
         </tr>
         <?php endforeach; ?>
     </table>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="add_student.php" class="btn">Add Student</a>
+    </div>
 </div>
 </body>
 </html>
