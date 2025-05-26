@@ -7,6 +7,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $newStudent->addChild("age", $_POST["age"]);
     $newStudent->addChild("gender", $_POST["gender"]);
     $newStudent->addChild("location", $_POST["location"]);
+    $newStudent->addChild("year", $_POST["year"]);
+    $newStudent->addChild("course", $_POST["course"]);
     $xml->asXML("students.xml");
     header("Location: index.php");
     exit();
@@ -48,6 +50,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label>Location:</label>
             <input type="text" name="location" required />
         </div>
+
+        <div class="form-group">
+    <label>Year:</label>
+    <input type="text" name="year" required />
+</div>
+
+<div class="form-group">
+    <label>Course:</label>
+    <input type="text" name="course" required />
+</div>
+
 
         <div class="form-actions">
             <input type="submit" value="Add" class="btn" />
