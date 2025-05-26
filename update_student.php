@@ -14,6 +14,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $currentStudent->age = $_POST["age"];
     $currentStudent->gender = $_POST["gender"];
     $currentStudent->location = $_POST["location"];
+    $currentStudent->year = $_POST["year"];
+    $currentStudent->course = $_POST["course"];
+
     $xml->asXML("students.xml");
     header("Location: index.php");
     exit();
@@ -54,6 +57,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label>Location:</label>
             <input type="text" name="location" value="<?php echo $currentStudent->location; ?>" required />
         </div>
+
+        <div class="form-group">
+    <label>Year:</label>
+    <input type="text" name="year" value="<?php echo $currentStudent->year; ?>" required />
+</div>
+
+<div class="form-group">
+    <label>Course:</label>
+    <input type="text" name="course" value="<?php echo $currentStudent->course; ?>" required />
+</div>
+
 
         <div class="form-actions">
             <input type="submit" value="Update" class="btn" />
