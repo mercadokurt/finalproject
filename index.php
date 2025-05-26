@@ -18,6 +18,8 @@ $xml = simplexml_load_file("students.xml");
             <th>Age</th>
             <th>Gender</th>
             <th>Location</th>
+            <th>Year</th>
+            <th> Course</th>
             <th>Actions</th>
         </tr>
         <?php foreach($xml->student as $student): ?>
@@ -26,6 +28,8 @@ $xml = simplexml_load_file("students.xml");
             <td><?php echo $student->age; ?></td>
             <td><?php echo $student->gender; ?></td>
             <td><?php echo $student->location; ?></td>
+            <td><?php echo $student->year; ?></td>
+            <td><?php echo $student->course; ?></td>
             <td>
                 <div class="action-buttons">
                     <a href="update_student.php?id=<?php echo $student['id']; ?>" class="btn">Update</a>
